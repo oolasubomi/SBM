@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Portfolio | Design & Data Analysis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6366f1',
+                        secondary: '#4f46e5',
+                        dark: '#1e293b',
+                        light: '#f8fafc'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-light text-dark dark:bg-dark dark:text-light">
+    <!-- Header/Navigation -->
+    <header class="sticky top-0 z-50 bg-white dark:bg-dark shadow-md">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-primary">SBM</div>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-8">
+                    <li><a href="#home" class="hover:text-primary transition-colors">Home</a></li>
+                    <li><a href="#about" class="hover:text-primary transition-colors">About</a></li>
+                    <li><a href="#skills" class="hover:text-primary transition-colors">Skills</a></li>
+                    <li><a href="#portfolio" class="hover:text-primary transition-colors">Portfolio</a></li>
+                    <li><a href="#testimonials" class="hover:text-primary transition-colors">Testimonials</a></li>
+                    <li><a href="#contact" class="hover:text-primary transition-colors">Contact</a></li>
+                </ul>
+                <button id="darkToggleBtn" class="ml-4 text-xl text-primary hover:text-secondary transition-colors hidden md:inline">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </nav>
+            <div class="flex items-center space-x-4 md:hidden text-2xl">
+                <!-- Dark mode toggle -->
+                <button id="darkToggleBtn" class="text-primary hover:text-secondary transition-colors">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <!-- Hamburger menu -->
+                <i class="fas fa-bars cursor-pointer"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="py-20 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">Creative Designer & Data Analyst</h1>
+                <p class="text-xl mb-8">Transforming ideas into visual stories and data into insights</p>
+                <a href="#contact" class="inline-block bg-white text-primary font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition-colors">Get In Touch</a>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="/Images/SBM 1.jpg" alt="Profile" class="rounded-full w-64 h-64 object-cover border-4 border-white shadow-lg">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">About Me</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <img src="/Images/SBM 2.jpg" alt="About Me" class="rounded-lg shadow-lg mx-auto">
+                </div>
+                <div class="md:w-1/2 md:pl-10">
+                    <h3 class="text-2xl font-bold mb-4">Who I Am</h3>
+                    <p class="mb-4">I'm a passionate creative professional with expertise in graphic design, website design, and data analysis. With over 3 years of experience, I blend artistic vision with analytical thinking to deliver compelling visual solutions and data-driven insights.</p>
+                    <p class="mb-6">My approach combines aesthetic sensibility with strategic thinking, ensuring that every project not only looks great but also achieves its objectives effectively.</p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <h4 class="font-bold">Name:</h4>
+                            <p>Balogun Oolasubomi</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Email:</h4>
+                            <p>Oolamilekan237@gmail.com</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Location:</h4>
+                            <p>Lagos, Nigeria</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Availability:</h4>
+                            <p>Freelance / Full-time</p>
+                        </div>
+                    </div>
+                    <div class="mt-8 flex space-x-4">
+                        <a href="#" class="bg-primary text-white py-2 px-6 rounded-full hover:bg-secondary transition-colors">Download CV</a>
+                        <a href="#portfolio" class="border border-primary text-primary py-2 px-6 rounded-full hover:bg-primary hover:text-white transition-colors">View Work</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-50 dark:bg-slate-900">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-dark dark:text-light">My Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <!-- Graphic Design Skills -->
+                <div class="bg-white dark:bg-slate-800 text-dark dark:text-light p-8 rounded-lg shadow-lg">
+                    <div class="text-4xl text-primary mb-4">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Graphic Design</h3>
+                    <ul class="space-y-3">
+                        <li class="flex flex-col">
+                            <div class="flex justify-between mb-1">
+                                <span>Adobe Photoshop</span>
+                                <span>50%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-primary h-2 rounded-full" style="width: 50%"></div>
+                            </div>
+                        </li>
+                        <li class="flex flex-col">
+                            <div class="flex justify-between mb-1">
+                                <span>Adobe Illustrator</span>
+                                <span>70%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-primary h-2 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </li>
+                        <li class="flex flex-col">
+                            <div class="flex justify-between mb-1">
+                                <span>Corel Draw</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-primary h-2 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Web Design Skills -->
+                <div class="bg-white dark:bg-slate-800 text-dark dark:text-light p-8 rounded-lg shadow-lg">
+                    <div class="text-4xl text-primary mb-4">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Web Design</h3>
+                    <ul class="space-y-3">
+                        <li class="flex flex-col">
+                            <div class="flex justify-between mb-1">
+                                <span>HTML/CSS</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-primary h-2 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </li>
+                        <li class="flex flex-col">
+                            <div class="flex justify-between mb-1">
+                                <span>UI/UX Design</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-primary h-2 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </li>
+                        <li class="flex flex-col">
+                            <div class="flex justify-between mb-1">
+                                <span>Figma</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-primary h-2 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </li>
+                        <li class="flex flex-col">
+                            <div class="flex justify-between mb-1">
+                                <span>Responsive Design</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-primary h-2 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Data Analysis Skills -->
+                <div class="bg-white dark:bg-slate-800 text-dark dark:text-light p-8 rounded-lg shadow-lg">
+                    <div class="text-4xl text-primary mb-4">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Data Analysis</h3>
+                    <ul class="space-y-3">
+                        <li class="flex flex-col">
+                            <div class="flex justify-between mb-1">
+                                <span>Excel/Spreadsheets</span>
+                                <span>65%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-primary h-2 rounded-full" style="width: 65%"></div>
+                            </div>
+                        </li>
+                        <li class="flex flex-col">
+                            <div class="flex justify-between mb-1">
+                                <span>Power BI</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-primary h-2 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </li>
+                        <li class="flex flex-col">
+                            <div class="flex justify-between mb-1">
+                                <span>SQL</span>
+                                <span>40%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-primary h-2 rounded-full" style="width: 40%"></div>
+                            </div>
+                        </li>
+                        <li class="flex flex-col">
+                            <div class="flex justify-between mb-1">
+                                <span>Tableau</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="bg-primary h-2 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">My Portfolio</h2>
+            <p class="text-center text-gray-600 mb-16 max-w-2xl mx-auto dark:text-light">Explore my latest projects across graphic design, web design, and data analysis.</p>
+            
+            <!-- Portfolio Filter -->
+            <div class="flex flex-wrap justify-center mb-12">
+                <button class="m-2 px-6 py-2 bg-primary text-white rounded-full">All</button>
+                <button class="m-2 px-6 py-2 bg-primary text-white rounded-full">Graphic Design</button>
+                <button class="m-2 px-6 py-2 bg-primary text-white rounded-full">Web Design</button>
+                <button class="m-2 px-6 py-2 bg-primary text-white rounded-full">Data Analysis</button>
+            </div>
+            
+            <!-- Portfolio Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Portfolio Item 1 -->
+                <div class="group relative overflow-hidden rounded-lg shadow-lg">
+                    <img src="Images/Brand Identity.png" alt="Brand Identity Project" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-6 text-white">
+                        <h3 class="text-xl font-bold">Brand Identity Design</h3>
+                        <p class="text-sm opacity-90">Graphic Design</p>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 2 -->
+                <div class="group relative overflow-hidden rounded-lg shadow-lg">
+                    <img src="/Images/desktop-design.jpg" alt="E-commerce Website" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-6 text-white">
+                        <h3 class="text-xl font-bold">E-commerce Website</h3>
+                        <p class="text-sm opacity-90">Web Design</p>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 3 -->
+                <div class="group relative overflow-hidden rounded-lg shadow-lg">
+                    <img src="Images/Movie Rating SS.png" alt="Sales Dashboard" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-6 text-white">
+                        <h3 class="text-xl font-bold">Sales Dashboard</h3>
+                        <p class="text-sm opacity-90">Data Analysis</p>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 4 -->
+                <div class="group relative overflow-hidden rounded-lg shadow-lg">
+                    <img src="/Images/Assignment 1.png" alt="Product Packaging" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-6 text-white">
+                        <h3 class="text-xl font-bold">Market Trends</h3>
+                        <p class="text-sm opacity-90">Graphic Design</p>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 5 -->
+                <div class="group relative overflow-hidden rounded-lg shadow-lg">
+                    <img src="/Images/desktop-preview.jpg" alt="Mobile App UI" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-6 text-white">
+                        <h3 class="text-xl font-bold">Mobile Site UI</h3>
+                        <p class="text-sm opacity-90">Web Design</p>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 6 -->
+                <div class="group relative overflow-hidden rounded-lg shadow-lg">
+                    <img src="/Images/Adidas SS.png" alt="Market Research Report" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-6 text-white">
+                        <h3 class="text-xl font-bold">Market Research Report</h3>
+                        <p class="text-sm opacity-90">Data Analysis</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-gray-50 dark:bg-slate-900">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-dark dark:text-light">Client Testimonials</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white dark:bg-slate-800 text-dark dark:text-light p-8 rounded-lg shadow-lg">
+                    <div class="text-primary text-2xl mb-4">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p class="mb-6 italic">"Working with this designer was an absolute pleasure. They transformed our brand identity with stunning visuals that perfectly captured our company's essence."</p>
+                    <div class="flex items-center">
+                        <img src="/Images/Victor.jpeg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">David Daramola</h4>
+                            <p class="text-sm text-gray-600">Marketing Director, Apex Planet</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white dark:bg-slate-800 text-dark dark:text-light p-8 rounded-lg shadow-lg">
+                    <div class="text-primary text-2xl mb-4">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p class="mb-6 italic">"The website design exceeded our expectations. Not only is it visually stunning, but it's also incredibly user-friendly and has significantly improved our conversion rates."</p>
+                    <div class="flex items-center">
+                        <img src="/Images/John.jpeg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Godwin God's time</h4>
+                            <p class="text-sm text-gray-600">CEO, God's Time Creative Academy</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-white dark:bg-slate-800 text-dark dark:text-light p-8 rounded-lg shadow-lg">
+                    <div class="text-primary text-2xl mb-4">
+                        <i class="fas fa-quote-left"></i>
+                    </div>
+                    <p class="mb-6 italic">"The data analysis provided invaluable insights that helped us make critical business decisions. The visualizations were clear, compelling, and easy for our entire team to understand."</p>
+                    <div class="flex items-center">
+                        <img src="/Images/Ola.jpeg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Faruq Umar</h4>
+                            <p class="text-sm text-gray-600">Operations Manager, El-Aqeel</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Get In Touch</h2>
+            <div class="flex flex-col md:flex-row">
+                <!-- Contact Info -->
+                <div class="md:w-1/3 mb-10 md:mb-0">
+                    <h3 class="text-2xl font-bold mb-6">Contact Information</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="text-primary text-xl mr-4">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Location</h4>
+                                <p>Lagos. Nigeria</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="text-primary text-xl mr-4">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Email</h4>
+                                <p>oolamilekan237@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="text-primary text-xl mr-4">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Phone</h4>
+                                <p>+234 (902) 427-9173</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h3 class="text-xl font-bold mb-4">Follow Me</h3>
+                        <div class="flex space-x-4">
+                            <a href="https://web.facebook.com/profile.php?id=61563481496583" class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center hover:bg-secondary transition-colors">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="wa.me/+2349024279173" class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center hover:bg-secondary transition-colors">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                            <a href="https://x.com/Oolamilekan5" class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center hover:bg-secondary transition-colors">
+                                <i class="fab fa-x"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center hover:bg-secondary transition-colors">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="md:w-2/3 md:pl-10">
+                    <form class="bg-white dark:bg-slate-800 text-dark dark:text-light p-8 rounded-lg shadow-lg">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label for="name" class="block mb-2 font-medium">Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                            </div>
+                            <div>
+                                <label for="email" class="block mb-2 font-medium">Email</label>
+                                <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                            </div>
+                        </div>
+                        <div class="mb-6">
+                            <label for="subject" class="block mb-2 font-medium">Subject</label>
+                            <input type="text" id="subject" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block mb-2 font-medium">Message</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-secondary transition-colors">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-10 bg-dark text-white">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 Creative Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+<script>
+    // Mobile Menu Toggle
+    document.addEventListener('DOMContentLoaded', () => {
+        const menuBtn = document.querySelector('.fa-bars');
+        const nav = document.createElement('nav');
+        nav.className = 'mobile-nav md:hidden absolute top-16 left-0 w-full bg-white dark:bg-dark shadow-md hidden';
+        nav.innerHTML = `
+            <ul class="flex flex-col space-y-4 p-4 text-center">
+                <li><a href="#home" class="block hover:text-primary dark:text-white">Home</a></li>
+                <li><a href="#about" class="block hover:text-primary dark:text-white">About</a></li>
+                <li><a href="#skills" class="block hover:text-primary dark:text-white">Skills</a></li>
+                <li><a href="#portfolio" class="block hover:text-primary dark:text-white">Portfolio</a></li>
+                <li><a href="#testimonials" class="block hover:text-primary dark:text-white">Testimonials</a></li>
+                <li><a href="#contact" class="block hover:text-primary dark:text-white">Contact</a></li>
+            </ul>
+        `;
+        document.querySelector('header').appendChild(nav);
+
+        menuBtn.addEventListener('click', () => {
+            nav.classList.toggle('hidden');
+        });
+
+        // Dark Mode Toggle
+        const darkToggleBtn = document.querySelector('#darkToggleBtn');
+        darkToggleBtn.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+        });
+    });
+</script>
+</html>
