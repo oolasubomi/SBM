@@ -36,13 +36,15 @@
                     <li><a href="#testimonials" class="hover:text-primary transition-colors">Testimonials</a></li>
                     <li><a href="#contact" class="hover:text-primary transition-colors">Contact</a></li>
                 </ul>
-                <button id="darkToggleBtn" class="ml-4 text-xl text-primary hover:text-secondary transition-colors hidden md:inline">
+
+                <!-- Dark mode toggle Desktop -->
+                <button id="darkToggleBtnDesktop" class="ml-4 text-xl text-primary hover:text-secondary transition-colors hidden md:inline">
                     <i class="fas fa-moon"></i>
                 </button>
             </nav>
             <div class="flex items-center space-x-4 md:hidden text-2xl">
-                <!-- Dark mode toggle -->
-                <button id="darkToggleBtn" class="text-primary hover:text-secondary transition-colors">
+                <!-- Dark mode toggle Mobile -->
+                <button id="darkToggleBtnMobile" class="text-primary hover:text-secondary transition-colors">
                     <i class="fas fa-moon"></i>
                 </button>
                 <!-- Hamburger menu -->
@@ -464,30 +466,38 @@
 <script>
     // Mobile Menu Toggle
     document.addEventListener('DOMContentLoaded', () => {
-        const menuBtn = document.querySelector('.fa-bars');
-        const nav = document.createElement('nav');
-        nav.className = 'mobile-nav md:hidden absolute top-16 left-0 w-full bg-white dark:bg-dark shadow-md hidden';
-        nav.innerHTML = `
-            <ul class="flex flex-col space-y-4 p-4 text-center">
-                <li><a href="#home" class="block hover:text-primary dark:text-white">Home</a></li>
-                <li><a href="#about" class="block hover:text-primary dark:text-white">About</a></li>
-                <li><a href="#skills" class="block hover:text-primary dark:text-white">Skills</a></li>
-                <li><a href="#portfolio" class="block hover:text-primary dark:text-white">Portfolio</a></li>
-                <li><a href="#testimonials" class="block hover:text-primary dark:text-white">Testimonials</a></li>
-                <li><a href="#contact" class="block hover:text-primary dark:text-white">Contact</a></li>
-            </ul>
-        `;
-        document.querySelector('header').appendChild(nav);
+    const menuBtn = document.querySelector('.fa-bars');
+    const nav = document.createElement('nav');
+    nav.className = 'mobile-nav md:hidden absolute top-16 left-0 w-full bg-white dark:bg-dark shadow-md hidden';
+    nav.innerHTML = `
+        <ul class="flex flex-col space-y-4 p-4 text-center">
+            <li><a href="#home" class="block hover:text-primary dark:text-white">Home</a></li>
+            <li><a href="#about" class="block hover:text-primary dark:text-white">About</a></li>
+            <li><a href="#skills" class="block hover:text-primary dark:text-white">Skills</a></li>
+            <li><a href="#portfolio" class="block hover:text-primary dark:text-white">Portfolio</a></li>
+            <li><a href="#testimonials" class="block hover:text-primary dark:text-white">Testimonials</a></li>
+            <li><a href="#contact" class="block hover:text-primary dark:text-white">Contact</a></li>
+        </ul>
+    `;
+    document.querySelector('header').appendChild(nav);
 
-        menuBtn.addEventListener('click', () => {
-            nav.classList.toggle('hidden');
-        });
-
-        // Dark Mode Toggle
-        const darkToggleBtn = document.querySelector('#darkToggleBtn');
-        darkToggleBtn.addEventListener('click', () => {
-            document.documentElement.classList.toggle('dark');
-        });
+    menuBtn.addEventListener('click', () => {
+        nav.classList.toggle('hidden');
     });
+
+    // Dark Mode Toggle
+    const darkToggleBtns = [
+        document.querySelector('#darkToggleBtnDesktop'),
+        document.querySelector('#darkToggleBtnMobile')
+    ];
+
+    darkToggleBtns.forEach(btn => {
+        if (btn) {
+            btn.addEventListener('click', () => {
+                document.documentElement.classList.toggle('dark');
+            });
+        }
+    });
+})
 </script>
 </html>
